@@ -1,0 +1,331 @@
+@import 'common/main.scss';
+@import '../../../../itop-portal-new-look-for-3.2-lts/public/css/utils/variables/colors/_base-palette';
+@import '../../../../itop-portal-new-look-for-3.2-lts/public/css/utils/variables/colors/_semantic-palette';
+
+/* Gestion de la couleur primaire */
+$ipb-color-primary-50: #ECFDF5FF;
+$ipb-color-primary-100: #D0FAE5FF;
+$ipb-color-primary-200: #A4F4CFFF;
+$ipb-color-primary-300: #5EE9B5FF;
+$ipb-color-primary-400: #00D492FF;
+$ipb-color-primary-500: #00BC7DFF;
+$ipb-color-primary-600: #009966FF;
+$ipb-color-primary-700: #007A55FF;
+$ipb-color-primary-800: #006045FF;
+$ipb-color-primary-900: #004F3BFF;
+$ipb-color-primary-950: #002C22FF;
+
+$ipb-color-grey-100: #f1f9f4;
+$ipb-color-grey-200: #E2F0E8FF;
+$ipb-color-grey-300: #CAE2D5FF;
+$ipb-color-grey-400: #90B9A0FF;
+$ipb-color-grey-500: #628E6EFF;
+$ipb-color-grey-600: #456C55FF;
+$ipb-color-grey-700: #31583CFF;
+$ipb-color-grey-800: #1D3D28FF;
+$ipb-color-grey-900: #0F2B13FF;
+
+/* Gestion du menu à gauche */
+$ipb-navigation-menu--background-color: $ipb-color-primary-900;
+$ipb-navigation-menu--user-part--background-color: $ipb-color-primary-800;
+$ipb-navigation-menu--dropdown-menu--items-remainder--hover--background-color: $ipb-color-primary-700;
+$ipb-navigation-menu--dropdown-menu--items-remainder--color: $ipb-color-primary-50;
+
+/* Gestion de la couleur des liens */
+$link-color : $ipb-color-primary-800;
+$link-hover-color : $ipb-color-primary-950;
+
+
+/* Gestion de la couleur des icones dans les briques */
+$ipb-tile--decoration--opacity: 0.1;
+$ipb-tile--decoration--background-color: common-adjust-alpha($ipb-color-primary-700, $ipb-tile--decoration--opacity);
+$ipb-tile--decoration--icon--color: $ipb-color-primary-800;
+
+/* gestion des image en pointillé sur la home page */
+$ipb-home--main-wrapper--before--background-image: url("../img/backgrounds/animatedshape.svg") !default;
+$ipb-home--main-wrapper--before--background-size: auto 100% !default;
+
+$ipb-home--main-wrapper--after--background-image: none !default;
+$ipb-home--main-wrapper--after--background-size: 0 !default;
+
+$ipb-browse-brick--mosaic-item--highlight-color:  #3c6300, #024a70, #016630, #005f78, #006045, #005f5a;
+
+$ipb-vendors-datatables--row--is-selected--color: $ipb-color-primary-900;
+$ipb-vendors-datatables--row--is-selected--background-color: $ipb-color-primary-100;
+$ipb-vendors-datatables--row--hover--background-color: $ipb-color-primary-50;
+
+$ipb-heavy-animated-border--border-radius: 10px;
+
+/* Gestion des couleurs des boutons */
+$ipb-button-colors: (
+        '' : (
+                'primary': (
+                        '': (
+                                $ipb-color-primary-700,
+                                $ipb-color-white-100,
+                                $ipb-color-primary-800
+                        ),
+                        ':hover': (
+                                $ipb-color-primary-800,
+                                $ipb-color-white-100,
+                                $ipb-color-primary-800
+                        ),
+                        ':active': (
+                                $ipb-color-primary-900,
+                                $ipb-color-white-100,
+                                $ipb-color-primary-900
+                        ),
+                        ':disabled': (
+                                $ipb-color-blue-200,
+                                $ipb-color-purple-600,
+                                $ipb-color-blue-300
+                        ),
+                ),
+                'default': (
+                        '': (
+                                $ipb-color-white-100,
+                                $ipb-color-grey-800,
+                                $ipb-color-grey-600
+                        ),
+                        ':hover': (
+                                $ipb-color-grey-100,
+                                $ipb-color-grey-900,
+                                $ipb-color-grey-700
+                        ),
+                        ':active': (
+                                $ipb-color-grey-200,
+                                $ipb-color-grey-900,
+                                $ipb-color-grey-700
+                        ),
+                        ':disabled': (
+                                $ipb-color-grey-200,
+                                $ipb-color-grey-700,
+                                $ipb-color-grey-300
+                        ),
+                ),
+                'success': (
+                        '': (
+                                $ipb-color-success-900,
+                                $ipb-color-white-100,
+                                $ipb-color-success-900
+                        ),
+                        ':hover': (
+                                $ipb-color-success-800,
+                                $ipb-color-green-100,
+                                $ipb-color-success-900
+                        ),
+                        ':active': (
+                                $ipb-color-success-950,
+                                $ipb-color-green-100,
+                                $ipb-color-success-950
+                        ),
+                        ':disabled': (
+                                $ipb-color-grey-200,
+                                $ipb-color-grey-700,
+                                $ipb-color-grey-300
+                        ),
+                ),
+                'warning': (
+                        '': (
+                                $ipb-color-warning-700,
+                                $ipb-color-white-100,
+                                $ipb-color-warning-900
+                        ),
+                        ':hover': (
+                                $ipb-color-warning-600,
+                                $ipb-color-warning-100,
+                                $ipb-color-warning-700
+                        ),
+                        ':active': (
+                                $ipb-color-warning-800,
+                                $ipb-color-warning-100,
+                                $ipb-color-warning-900
+                        ),
+                        ':disabled': (
+                                $ipb-color-grey-200,
+                                $ipb-color-grey-700,
+                                $ipb-color-grey-300
+                        ),
+                ),
+                'danger': (
+                        '': (
+                                $ipb-color-danger-800,
+                                $ipb-color-white-100,
+                                $ipb-color-danger-900
+                        ),
+                        ':hover': (
+                                $ipb-color-danger-700,
+                                $ipb-color-danger-100,
+                                $ipb-color-danger-800
+                        ),
+                        ':active': (
+                                $ipb-color-danger-900,
+                                $ipb-color-danger-100,
+                                $ipb-color-danger-950
+                        ),
+                        ':disabled': (
+                                $ipb-color-grey-200,
+                                $ipb-color-grey-700,
+                                $ipb-color-grey-300
+                        ),
+                ),
+                'info': (
+                        '': (
+                                $ipb-color-information-800,
+                                $ipb-color-white-100,
+                                $ipb-color-information-900
+                        ),
+                        ':hover': (
+                                $ipb-color-information-700,
+                                $ipb-color-information-100,
+                                $ipb-color-information-800
+                        ),
+                        ':active': (
+                                $ipb-color-information-900,
+                                $ipb-color-information-100,
+                                $ipb-color-information-950
+                        ),
+                        ':disabled': (
+                                $ipb-color-grey-200,
+                                $ipb-color-grey-700,
+                                $ipb-color-grey-300
+                        ),
+                ),
+        ),
+        'alternative' : (
+                'primary': (
+                        '': (
+                                $ipb-color-transparent,
+                                $ipb-color-blue-800,
+                                $ipb-color-transparent
+                        ),
+                        ':hover': (
+                                $ipb-color-blue-100,
+                                $ipb-color-blue-900,
+                                $ipb-color-blue-100
+                        ),
+                        ':active': (
+                                $ipb-color-blue-200,
+                                $ipb-color-blue-900,
+                                $ipb-color-blue-200
+                        ),
+                        ':disabled': (
+                                $ipb-color-blue-200,
+                                $ipb-color-blue-600,
+                                $ipb-color-blue-300
+                        ),
+                ),
+                'default': (
+                        '': (
+                                $ipb-color-transparent,
+                                $ipb-color-grey-800,
+                                $ipb-color-transparent
+                        ),
+                        ':hover': (
+                                $ipb-color-grey-200,
+                                $ipb-color-grey-900,
+                                $ipb-color-grey-200
+                        ),
+                        ':active': (
+                                $ipb-color-grey-300,
+                                $ipb-color-grey-900,
+                                $ipb-color-grey-300
+                        ),
+                        ':disabled': (
+                                $ipb-color-transparent,
+                                $ipb-color-grey-500,
+                                $ipb-color-transparent
+                        ),
+                ),
+                'success': (
+                        '': (
+                                $ipb-color-transparent,
+                                $ipb-color-success-900,
+                                $ipb-color-transparent
+                        ),
+                        ':hover': (
+                                $ipb-color-success-100,
+                                $ipb-color-success-900,
+                                $ipb-color-success-100
+                        ),
+                        ':active': (
+                                $ipb-color-success-200,
+                                $ipb-color-success-900,
+                                $ipb-color-success-200
+                        ),
+                        ':disabled': (
+                                $ipb-color-grey-200,
+                                $ipb-color-grey-700,
+                                $ipb-color-grey-300
+                        ),
+                ),
+                'warning': (
+                        '': (
+                                $ipb-color-transparent,
+                                $ipb-color-warning-800,
+                                $ipb-color-transparent
+                        ),
+                        ':hover': (
+                                $ipb-color-warning-100,
+                                $ipb-color-warning-900,
+                                $ipb-color-warning-100
+                        ),
+                        ':active': (
+                                $ipb-color-warning-200,
+                                $ipb-color-warning-900,
+                                $ipb-color-warning-200
+                        ),
+                        ':disabled': (
+                                $ipb-color-grey-200,
+                                $ipb-color-grey-700,
+                                $ipb-color-grey-300
+                        ),
+                ),
+                'danger': (
+                        '': (
+                                $ipb-color-transparent,
+                                $ipb-color-danger-800,
+                                $ipb-color-transparent
+                        ),
+                        ':hover': (
+                                $ipb-color-danger-100,
+                                $ipb-color-danger-800,
+                                $ipb-color-danger-100
+                        ),
+                        ':active': (
+                                $ipb-color-danger-200,
+                                $ipb-color-danger-800,
+                                $ipb-color-danger-200
+                        ),
+                        ':disabled': (
+                                $ipb-color-grey-200,
+                                $ipb-color-grey-700,
+                                $ipb-color-grey-300
+                        ),
+                ),
+                'info': (
+                        '': (
+                                $ipb-color-transparent,
+                                $ipb-color-information-800,
+                                $ipb-color-transparent
+                        ),
+                        ':hover': (
+                                $ipb-color-information-100,
+                                $ipb-color-information-800,
+                                $ipb-color-information-100
+                        ),
+                        ':active': (
+                                $ipb-color-information-200,
+                                $ipb-color-information-800,
+                                $ipb-color-information-200
+                        ),
+                        ':disabled': (
+                                $ipb-color-grey-200,
+                                $ipb-color-grey-700,
+                                $ipb-color-grey-300
+                        ),
+                ),
+        ),
+) !default;
+
+@import "../../../../itop-portal-new-look-for-3.2-lts/public/css/themes/all";
